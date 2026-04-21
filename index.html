@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Notes</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <header>
+        <div class="title">
+            <h1><i class="fa-solid fa-thumbtack"></i> Sticky Notes</h1>
+        </div>
+
+        <div class="tools">
+            <span class="notes-count">0 Notes</span>
+            <button class="random">random<i class="fa-solid fa-dice"></i></button>
+            <button class="Newest">newest <i class="fa-solid fa-arrow-up"></i></button>
+            <button class="oldest">oldest <i class="fa-solid fa-arrow-down"></i></button>
+        </div>
+    </header>
+
+    <main>
+        
+        <div class="wall">
+            <div class="After-Create-btn ">
+                
+                <div class="New-class">
+                    <h2><i class="fa-regular fa-note-sticky"></i>NEW NOTE</h2>
+                    
+                    <div class="Color-picker">
+                        <div class="color-dot color-Cream selected" data-color="Cream" title="Cream"></div>
+                        <div class="color-dot color-Blush" data-color="Blush" title="Blush"></div>
+                        <div class="color-dot color-Mist" data-color="Mist" title="Mist"></div>
+                        <div class="color-dot color-Sage" data-color="Sage" title="Sage"></div>
+                        <div class="color-dot color-Lilac" data-color="Lilac" title="Lilac"></div>
+                        <div class="color-dot color-Wheat" data-color="Wheat" title="Wheat"></div>
+                    </div>
+    
+                    <p>style</p>
+                    <div class="grid">
+                        <div class="lined style selected" title="Lined" data-style="lined"></div>
+                        <div class="plain style" title="plain" data-style="plain"></div>
+                        <div class="graph style" title="graph" data-style="graph"></div>
+                        <div class="dotted style" title="dotted" data-style="dotted"></div>
+                        <div class="dark style" title="dark" data-style="dark"></div>
+                    </div>
+                    
+                    <textarea class="inp" maxlength="120" placeholder="Type your note here...."></textarea>
+                    <span class="len-inp">0 / 120</span>
+                    <div class="empty">
+    
+                    </div>
+    
+                    <div class="btn-select">
+                        <button class="cancel">Cancel</button>
+                        <button class="post"><i class="fa-solid fa-thumbtack"></i> Post It</button>
+                    </div>
+                </div>  
+            </div>
+            <!-- <div class="card Wheat lined" data-timestamp="1000">
+                <p>hi my name is mayank!</p>
+            </div>
+            <div class="card Sage dotted" data-timestamp="2000">
+                <p>hi my name is mayank!</p>
+            </div>
+            <div class="card Mist square" data-timestamp="3000">
+                <p>hi my name is mayank!</p>
+            </div>
+            <div class="card Lilac lined" data-timestamp="4000">
+                <p>hi my name is mayank!</p>
+            </div>
+            <div class="card Cream dark" data-timestamp="5000">
+                <p>hi my name is mayank!</p>
+            </div>
+            <div class="card Blush dotted" data-timestamp="6000">
+                <p>hi my name is mayank!</p>
+            </div>
+            <div class="card Blush dotted" data-timestamp="7000">
+                <p>hi my name is mayank!</p>
+            </div>
+            <div class="card Blush dotted" data-timestamp="8000">
+                <p>hi my name is mayank!</p>
+            </div> -->
+            
+            
+        </div>
+        
+
+        
+        <div class="Create-btn">
+            <button>+</button>
+        </div>
+        
+        <script src="script.js"></script>
+        
+    </main>
+</body>
+</html>

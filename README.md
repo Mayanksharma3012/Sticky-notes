@@ -87,4 +87,4 @@ MIT — do whatever you want with it.
 
 ---
 
-Made by [Mayank](https://github.com/your-username)
+Made by [Mayank](https://mayanksharma3012.github.io/Sticky-notes/)

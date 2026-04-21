@@ -24,8 +24,8 @@ A lightweight, fully client-side sticky notes web app — no backend, no account
 No build tools or dependencies needed.
 
 ```bash
-git clone https://github.com/your-username/sticky-notes.git
-cd sticky-notes
+git clone https://github.com/Mayanksharma3012/Sticky-notes.git
+cd Sticky-notes
 ```
 
 Then just open `index.html` in your browser — that's it.

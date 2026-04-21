@@ -2,7 +2,7 @@
 
 A lightweight, fully client-side sticky notes web app — no backend, no accounts, no installs. Just open it and start pinning your thoughts to the wall.
 
-![Sticky Notes Preview](preview.png)
+![Sticky Notes Preview](Preview.png)
 
 ---
 

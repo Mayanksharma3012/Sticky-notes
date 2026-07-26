@@ -142,8 +142,17 @@
     z-index: 1;
 }
 
-.New-class > p {
+.Style_name {
     margin: 15px 0 5px;
+    text-indent: 10px;
+    padding-left: 15px;
+    font-size: 1rem;
+    color: #1c1c1c;
+}
+
+.Color_name {
+    
+    margin: 0px 0 5px;
     text-indent: 10px;
     padding-left: 15px;
     font-size: 1rem;

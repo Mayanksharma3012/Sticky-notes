@@ -7,27 +7,25 @@ dotenv.config(); // ✅ MUST be the first line
 
 import express from 'express';
 import connectDB from './db/index.js';
-const app = express()
-const port = 3000
+import router from './routes/notes.routes.js';
 
+const app = express();
+const port = 3000;
 
-async function startServer(){
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+async function startServer() {
     try {
-        await connectDB()
-        
-        app.get('/', (req, res) => { 
-            res.send('Hello World!') 
-        }) 
-        
+        await connectDB();
+        app.use('/api', router);
+
         app.listen(port, () => {
-            console.log(`Example app listening on port ${port}`)
-            
-        }
-    )
+            console.log(`Example app listening on port ${port}`);
+        });
     } catch (error) {
-        console.log('error in MongoDB : ')
+        console.log('error in MongoDB : ', error);
     }
-    
 }
 
-startServer()
+startServer();

@@ -22,5 +22,19 @@ export const createNote = async (req, res) => {
     }
 };
 
+
+// find notes
 // for finding note i should use Notes.find()
 
+export const findNote = async (req, res) => {
+    try {
+        const notes = await Notes.find();
+        return res.status(200).json(notes);
+    } catch (error) {
+        return res.status(500).json({
+            message: 'Failed to create note',
+            error: error.message
+        });
+        
+    }
+}

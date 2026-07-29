@@ -3,12 +3,13 @@ import { Notes } from "../models/notes.model.js"
 // Save a brand new note
 export const createNote = async (req, res) => {
     try {
-        const { text, style, color } = req.body;
+        const { text, style, color, tilts } = req.body;
 
         const newNote = new Notes({
             text,
             style,
-            color
+            color,
+            tilts
         });
 
         const savedNote = await newNote.save();

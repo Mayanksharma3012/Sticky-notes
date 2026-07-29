@@ -2,8 +2,8 @@ import { useState } from 'react';
 import './wall.css'
 
 export function Wall({ cards, onAddCard }) {
-    const COLORS = ['Cream','Blush','Mist','Sage','Lilac','Wheat'];
-    const STYLES = ['lined','plain','graph','dotted','dark'];
+    const COLORS = ['Cream', 'Blush', 'Mist', 'Sage', 'Lilac', 'Wheat'];
+    const STYLES = ['lined', 'plain', 'graph', 'dotted', 'dark'];
 
     const [After_Create_Btn, setAfter_Create_Btn] = useState(false)
     const [input, setInput] = useState('')
@@ -31,8 +31,8 @@ export function Wall({ cards, onAddCard }) {
     };
 
     const handleStyleClick = (event) => {
-      const style = event.currentTarget.dataset.style;
-      setSelectedStyle(style);
+        const style = event.currentTarget.dataset.style;
+        setSelectedStyle(style);
     }
 
     const handlePost = () => {
@@ -65,17 +65,17 @@ export function Wall({ cards, onAddCard }) {
                     <div className="New-class" onClick={(event) => event.stopPropagation()}>
                         <h2><i className="fa-regular fa-note-sticky"></i>NEW NOTE</h2>
 
-                            <p className='Color_name'>color</p>
+                        <p className='Color_name'>color</p>
                         <div className="Color-picker">
                             {COLORS.map((color) => (
-                                    <div
-                                        key={color}
-                                        className={`color-dot color-${color} ${selectedColor === color ? 'selected' : ''}`}
-                                        data-color={color}
-                                        title={color}
-                                        onClick={handleColorClick}
-                                    />
-                                ))}
+                                <div
+                                    key={color}
+                                    className={`color-dot color-${color} ${selectedColor === color ? 'selected' : ''}`}
+                                    data-color={color}
+                                    title={color}
+                                    onClick={handleColorClick}
+                                />
+                            ))}
                         </div>
 
                         <p className='Style_name'>style</p>
@@ -100,6 +100,13 @@ export function Wall({ cards, onAddCard }) {
                                 setShowError(false);
                                 setInput(e.target.value);
                             }}
+                            onKeyDown={(e) => {
+                                if (e.key === 'Enter') {
+                                    e.preventDefault()
+                                    handlePost()
+                                }
+                            }
+                            }
                         ></textarea>
 
                         <span className="len-inp">{input.length} / 120</span>

@@ -15,6 +15,11 @@ const notesSchema = new mongoose.Schema({
         enum:['Cream','Blush','Mist','Sage','Lilac','Wheat'],
         required: true
     },
+    tilts:{
+        type: String,
+        enum:['tilt-left', 'tilt-right', 'tilt-normal'],
+        required: true
+    }
 },{timestamps: true})
 
 export const Notes = mongoose.model('Notes', notesSchema);

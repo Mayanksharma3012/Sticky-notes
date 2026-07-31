@@ -34,7 +34,7 @@ function App() {
   useEffect(() => {
     const loadNotes = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/notes')
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/notes`)
         const notes = normalizeCards(response.data || [])
         notes.sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0))
         setCards(notes)
@@ -55,7 +55,7 @@ function App() {
     }
 
     try {
-      const response = await axios.post('http://localhost:3000/api/notes', cardToAdd)
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/notes`, cardToAdd)
       const savedNote = response.data
       const normalized = normalizeCards([savedNote])[0]
       setCards((prev) => [normalized, ...prev])

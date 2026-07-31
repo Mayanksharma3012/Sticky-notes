@@ -10,16 +10,16 @@ import connectDB from './db/index.js';
 import router from './routes/notes.routes.js';
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
-app.use(cors({ origin: ['http://localhost:5173', 'http://127.0.0.1:5173'] }));
-app.use(express.json());
+app.use(cors({ origin: process.env.FRONTEND_URL }));
+app.use(express.json()); 
 app.use(express.urlencoded({ extended: true }));
 
 async function startServer() {
     try {
         await connectDB();
-        app.use('/api', router);
+        app.use(`/api`, router);
 
         app.listen(port, () => {
             console.log(`Example app listening on port ${port}`);

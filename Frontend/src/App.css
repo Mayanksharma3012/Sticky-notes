@@ -7,8 +7,15 @@
     }
 }
 
-/* Tablets: 3 per row */
-@media (max-width: 768px) {
+/* Small laptops / larger tablets: 3 per row */
+@media (max-width: 900px) {
+    .card {
+        width: calc((100% - 2 * 20px) / 3);
+    }
+}
+
+/* Tablets: 2 per row */
+@media (max-width: 650px) {
     header {
         height: auto;
         min-height: 3.2rem;
@@ -36,10 +43,11 @@
     .wall {
         padding: 14px;
         gap: 14px;
+        justify-content: center;
     }
 
     .card {
-        width: calc((100% - 2 * 14px) / 3);
+        width: calc((100% - 14px) / 2);
         min-height: 100px;
         font-size: 0.9rem;
     }
@@ -75,10 +83,12 @@
     .wall {
         padding: 12px;
         gap: 12px;
+        justify-content: center;
     }
 
     .card {
-        width: calc((100% - 12px) / 2);
+        width: 100%;
+        max-width: 100%;
         min-height: 90px;
         font-size: 0.85rem;
         padding: 10px;
